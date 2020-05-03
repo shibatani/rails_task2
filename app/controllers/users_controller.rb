@@ -15,11 +15,7 @@ class UsersController < ApplicationController
 		User.create(user_params)
 	end
 
-	# 詳細情報を表示するためのアクション
-	def show
-		@user = User.find(params[:id])
-	end
-
+	# 更新を行うためのアクション
 	def update
 		user = User.find(params[:id])
 		user.update(user_params)
